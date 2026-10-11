@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly | Blog & Inspiration</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+</head>
+<body>
+    <!-- Animated Quality Page Preloader -->
+    <div id="pagePreloader" class="page-preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo-ring">
+                <img src="assets/images/logo.webp" alt="Stackly Loading" class="preloader-logo-img" data-aos="zoom-in">
+                <div class="preloader-spinner"></div>
+            </div>
+            <div class="preloader-dots">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Header / Navbar -->
+    <header class="header page-header">
+        <div class="container header-container"  data-aos="fade-up">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.webp" alt="Stackly Grocery Store" class="site-logo-img" data-aos="zoom-in">
+            </a>
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="blog.html" class="active">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <a href="login.html" class="btn btn-outline"><i class="fa-regular fa-user"></i> Login</a>
+            </div>
+            <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </header>
+
+    <!-- 1. Hero Banner -->
+    <section class="page-hero" data-aos="fade-up">
+        <div class="page-hero-bg">
+            <img src="assets/images/IMG-20261009-WA6594.webp" alt="Blog Inspiration" data-aos="zoom-in">
+            <div class="page-hero-overlay"></div>
+        </div>
+        <div class="container page-hero-content center"  data-aos="fade-up">
+            <h1>Curation <span class="highlight">Inspiration</span></h1>
+            <p>Tips, trends, and tutorials to help you create meals you love.</p>
+        </div>
+    </section>
+
+    <!-- 2. Featured Blog Post -->
+    <section class="featured-post-section section-padding" data-aos="fade-up">
+        <div class="container"  data-aos="fade-up">
+            <div class="section-header" data-aos="zoom-in-up">
+                <span class="subtitle">MUST READ</span>
+                <h2  data-aos="fade-up">Featured <span class="highlight-line">Article</span></h2>
+            </div>
+            
+            <div class="featured-post-card">
+                <div class="featured-post-img">
+                    <img src="assets/images/IMG-20261009-WA6007.webp" alt="Fresh Fruits Tips" data-aos="zoom-in">
+                    <span class="category-badge">Fresh Produce</span>
+                </div>
+                <div class="featured-post-content">
+                    <div class="blog-meta">
+                        <span><i class="fa-regular fa-calendar"></i> Oct 25, 2023</span>
+                        <span><i class="fa-regular fa-clock"></i> 8 min read</span>
+                    </div>
+                    <h2  data-aos="fade-up"><a href="404.html">The Art of Flavor: How to Create a Fresh and Inviting Fruit Platter</a></h2>
+                    <p>Discover the secrets of professional nutritionists. Learn how to mix flavors, balance macros, and layer ingredients to completely transform your meals from flat and boring to vibrant, rich, and incredibly healthy this season.</p>
+                    <div class="author-info">
+                        <img src="assets/images/uifaces-popular-avatar (1).webp" alt="Sarah Jenkins" data-aos="zoom-in">
+                        <span>By <strong>Sarah Jenkins</strong></span>
+                    </div>
+                    <a href="404.html" class="btn featured-article-btn">Read Full Article <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Blog Main Layout (4, 5, 6, 7) -->
+    <section class="blog-main-layout section-padding bg-light-cream" data-aos="fade-up">
+        <div class="container blog-grid-container"  data-aos="fade-up">
+            
+            <!-- Main Content Area: 4. Latest Articles -->
+            <div class="blog-main-content">
+                <h3 class="widget-title" data-aos="fade-up">Latest Articles</h3>
+                <div class="latest-articles-grid">
+                    <!-- Article 1 -->
+                    <article class="blog-card" data-aos="flip-left" data-aos-delay="100">
+                        <div class="blog-img">
+                            <img src="assets/images/IMG-20261009-WA7100.webp" alt="Fresh Veggies Ideas" data-aos="zoom-in">
+                            <span class="category-badge">Fresh Vegetables</span>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span><i class="fa-regular fa-calendar"></i> Oct 20, 2023</span>
+                            </div>
+                            <h3  data-aos="fade-up"><a href="404.html">How to Choose the Perfect Organic Produce Box</a></h3>
+                            <p>A comprehensive guide to finding the best kitchen setup for your dietary needs and fresh vegetable selection.</p>
+                            <a href="404.html" class="read-more">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    <!-- Article 2 -->
+                    <article class="blog-card" data-aos="flip-left" data-aos-delay="200">
+                        <div class="blog-img">
+                            <img src="assets/images/pantry-grocery.webp" alt="Pantry Grocery" data-aos="zoom-in">
+                            <span class="category-badge">Pantry</span>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span><i class="fa-regular fa-calendar"></i> Oct 18, 2023</span>
+                            </div>
+                            <h3  data-aos="fade-up"><a href="404.html">Top 5 Pantry Staples for Fresh Kitchens in 2024</a></h3>
+                            <p>Get ahead of the curve with these mouth-watering ingredients that will define your pantry layout next year.</p>
+                            <a href="404.html" class="read-more">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    <!-- Article 3 -->
+                    <article class="blog-card" data-aos="flip-left" data-aos-delay="300">
+                        <div class="blog-img">
+                            <img src="assets/images/IMG-20261009-WA8863.webp" alt="Dairy Products Guide" data-aos="zoom-in">
+                            <span class="category-badge">Guides</span>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span><i class="fa-regular fa-calendar"></i> Oct 12, 2023</span>
+                            </div>
+                            <h3  data-aos="fade-up"><a href="404.html">The Ultimate Guide to Layering Flavors in Any Meal</a></h3>
+                            <p>Master the three types of dairy products to create functional and beautifully balanced meals.</p>
+                            <a href="404.html" class="read-more">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    <!-- Article 4 -->
+                    <article class="blog-card" data-aos="flip-left" data-aos-delay="100">
+                        <div class="blog-img">
+                            <img src="assets/images/IMG-20261009-WA6336.webp" alt="Small Meals" data-aos="zoom-in">
+                            <span class="category-badge">Small Meals</span>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span><i class="fa-regular fa-calendar"></i> Oct 08, 2023</span>
+                            </div>
+                            <h3  data-aos="fade-up"><a href="404.html">10 Genius Storage Hacks for Tiny Kitchens</a></h3>
+                            <p>Maximize every square inch of your kitchen without sacrificing quality or cluttering your pantry.</p>
+                            <a href="404.html" class="read-more">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    <!-- Article 5 -->
+                    <article class="blog-card" data-aos="flip-left" data-aos-delay="200">
+                        <div class="blog-img">
+                            <img src="assets/images/IMG-20261009-WA7571.webp" alt="Fresh Fruits Setup" data-aos="zoom-in">
+                            <span class="category-badge">Fresh Fruits</span>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span><i class="fa-regular fa-calendar"></i> Oct 02, 2023</span>
+                            </div>
+                            <h3  data-aos="fade-up"><a href="404.html">Organizing Groceries for Better Flow and Cooking</a></h3>
+                            <p>Ditch the cluttered kitchen layout. Here's how to position your pantry items to encourage efficient cooking.</p>
+                            <a href="404.html" class="read-more">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    <!-- Article 6 -->
+                    <article class="blog-card" data-aos="flip-left" data-aos-delay="300">
+                        <div class="blog-img">
+                            <img src="assets/images/IMG-20261009-WA3664.webp" alt="Beverages Grocery" data-aos="zoom-in">
+                            <span class="category-badge">Beverages</span>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span><i class="fa-regular fa-calendar"></i> Sep 28, 2023</span>
+                            </div>
+                            <h3  data-aos="fade-up"><a href="404.html">Transitional Seasonal Grocery to Enjoy All Autumn Long</a></h3>
+                            <p>Extend the life of your beverage space with seasonal spices and warm dairy products.</p>
+                            <a href="404.html" class="read-more">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+                
+                
+            </div>
+
+            <!-- Sidebar -->
+            <div class="blog-sidebar">
+                
+                <!-- 5. Popular Posts -->
+                <div class="sidebar-widget" data-aos="fade-up">
+                    <h4 class="widget-title" data-aos="fade-up">Popular Posts</h4>
+                    <div class="popular-posts-list" data-aos="fade-up">
+                        <a href="404.html" class="popular-post-item" data-aos="fade-up">
+                            <img src="assets/images/IMG-20261009-WA4846.webp" alt="Post" data-aos="zoom-in">
+                            <div class="pp-info">
+                                <h5>5 Ways to Serve an Exotic Fruit</h5>
+                                <span>Sep 14, 2023</span>
+                            </div>
+                        </a>
+                        <a href="404.html" class="popular-post-item" data-aos="fade-up">
+                            <img src="assets/images/IMG-20261009-WA4416.webp" alt="Post" data-aos="zoom-in">
+                            <div class="pp-info">
+                                <h5>Choosing the Right Portion Size</h5>
+                                <span>Aug 22, 2023</span>
+                            </div>
+                        </a>
+                        <a href="404.html" class="popular-post-item" data-aos="fade-up">
+                            <img src="assets/images/IMG-20261009-WA1081.webp" alt="Post" data-aos="zoom-in">
+                            <div class="pp-info">
+                                <h5>Creating a Charcuterie Board Like a Pro</h5>
+                                <span>Jul 05, 2023</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 6. Decorating Tips -->
+                <div class="sidebar-widget tip-widget" data-aos="fade-up">
+                    <div class="tip-icon"><i class="fa-regular fa-lemon"></i></div>
+                    <h4  data-aos="fade-up">Pro Culinary Tip</h4>
+                    <p>"When storing produce, keep it in a cool, dry place and let the organic items breathe. This immediately makes your ingredients last longer and taste fresher."</p>
+                </div>
+                
+                <!-- 7. Trending Topics -->
+                <div class="sidebar-widget" data-aos="fade-up">
+                    <h4 class="widget-title" data-aos="fade-up">Trending Topics</h4>
+                    <div class="tag-cloud" data-aos="fade-up">
+                        <a href="404.html" class="tag">#Minimalism</a>
+                        <a href="404.html" class="tag">#BohoChic</a>
+                        <a href="404.html" class="tag">#PlantParent</a>
+                        <a href="404.html" class="tag">#DIY</a>
+                        <a href="404.html" class="tag">#SmallSpaces</a>
+                        <a href="404.html" class="tag">#ColorTrends</a>
+                        <a href="404.html" class="tag">#VintageDecor</a>
+                    </div>
+                </div>
+                
+                <!-- 8. Archives -->
+                <div class="sidebar-widget" data-aos="fade-up">
+                    <h4 class="widget-title" data-aos="fade-up">Archives</h4>
+                    <ul class="archive-list" data-aos="fade-up">
+                        <li><a href="404.html">October 2023 <span>(12)</span></a></li>
+                        <li><a href="404.html">September 2023 <span>(8)</span></a></li>
+                        <li><a href="404.html">August 2023 <span>(15)</span></a></li>
+                        <li><a href="404.html">July 2023 <span>(9)</span></a></li>
+                        <li><a href="404.html">June 2023 <span>(11)</span></a></li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- DIY Video Tutorials -->
+    <section class="video-tutorials section-padding" data-aos="fade-up">
+        <div class="container"  data-aos="fade-up">
+            <div class="section-header" data-aos="zoom-in-up">
+                <span class="subtitle">LEARN & CREATE</span>
+                <h2  data-aos="fade-up">DIY Recipes <span class="highlight-line">Tutorials</span></h2>
+            </div>
+            <div class="video-grid" data-aos="fade-up">
+                <div class="video-card" data-aos="flip-up">
+                    <div class="video-thumb">
+                        <img src="assets/images/IMG-20261009-WA6336.webp" alt="DIY Video" data-aos="zoom-in">
+                        <a href="404.html" class="play-btn" aria-label="Play Video"><i class="fa-solid fa-play"></i></a>
+                        <span class="video-duration">05:24</span>
+                    </div>
+                    <div class="video-info">
+                        <h4  data-aos="fade-up">How to Organize a Pantry Shelf</h4>
+                        <p>A step-by-step guide to adding organic storage to any kitchen.</p>
+                    </div>
+                </div>
+                <div class="video-card" data-aos="flip-up">
+                    <div class="video-thumb">
+                        <img src="assets/images/IMG-20261009-WA8785.webp" alt="DIY Video" data-aos="zoom-in">
+                        <a href="404.html" class="play-btn" aria-label="Play Video"><i class="fa-solid fa-play"></i></a>
+                        <span class="video-duration">03:45</span>
+                    </div>
+                    <div class="video-info">
+                        <h4  data-aos="fade-up">Preserving Old Fruits with Traditional Methods</h4>
+                        <p>Give your old bottled preserves a trendy, textured authentic finish.</p>
+                    </div>
+                </div>
+                <div class="video-card" data-aos="flip-up">
+                    <div class="video-thumb">
+                        <img src="assets/images/IMG-20261009-WA9536.webp" alt="DIY Video" data-aos="zoom-in">
+                        <a href="404.html" class="play-btn" aria-label="Play Video"><i class="fa-solid fa-play"></i></a>
+                        <span class="video-duration">08:12</span>
+                    </div>
+                    <div class="video-info">
+                        <h4  data-aos="fade-up">Creating a Professional Charcuterie Board</h4>
+                        <p>Learn the chef's trick to spacing and arranging pantry items perfectly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Featured Products -->
+    <section class="blog-products section-padding bg-light-cream" data-aos="fade-up">
+        <div class="container"  data-aos="fade-up">
+            <div class="section-header center" data-aos="zoom-in-up">
+                <span class="subtitle">SHOP THE LOOK</span>
+                <h2  data-aos="fade-up">Featured <span class="highlight-line">Products</span></h2>
+                <p>Loved the ingredients in our articles? Shop them directly below.</p>
+            </div>
+            
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card" data-aos="flip-left" data-aos-delay="100">
+                    <div class="badge">New</div>
+                  <div class="product-img">
+                        <img src="assets/images/IMG-20261009-WA0485.webp" alt="Velvet Fruit" data-aos="zoom-in">
+                    </div>
+                    <div class="product-info">
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                            <span>(42)</span>
+                        </div>
+                        <h3  data-aos="fade-up">Emerald Green Apples</h3>
+                        <div class="price-row">
+                            <span class="price">$899.00</span>
+                            <a href="404.html" class="btn btn-primary btn-sm" aria-label="Add to Cart"><i class="fa-solid fa-cart-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="product-card" data-aos="flip-left" data-aos-delay="200">
+                    <div class="product-img">
+                        <img src="assets/images/IMG-20261009-WA7321.webp" alt="Packaged Juice" data-aos="zoom-in">
+                    </div>
+                    <div class="product-info">
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span>(18)</span>
+                        </div>
+                        <h3  data-aos="fade-up">Organic Packaged Juice</h3>
+                        <div class="price-row">
+                            <span class="price">$45.00</span>
+                            <a href="404.html" class="btn btn-primary btn-sm" aria-label="Add to Cart"><i class="fa-solid fa-cart-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="product-card" data-aos="flip-left" data-aos-delay="300">
+                    <div class="badge sale">Sale</div>
+                   <div class="product-img">
+                        <img src="assets/images/IMG-20261009-WA3185.webp" alt="Floor Milk" data-aos="zoom-in">
+                    </div>
+                    <div class="product-info">
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                            <span>(24)</span>
+                        </div>
+                        <h3  data-aos="fade-up">Premium Almond Milk</h3>
+                        <div class="price-row">
+                            <span class="price"><span class="old-price">$180.00</span> $149.00</span>
+                            <a href="404.html" class="btn btn-primary btn-sm" aria-label="Add to Cart"><i class="fa-solid fa-cart-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="product-card" data-aos="flip-left" data-aos-delay="100">
+                   <div class="product-img">
+                        <img src="assets/images/IMG-20261009-WA4143.webp" alt="Lounge Bread" data-aos="zoom-in">
+                    </div>
+                    <div class="product-info">
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span>(56)</span>
+                        </div>
+                        <h3  data-aos="fade-up">Classic Artisan Bread</h3>
+                        <div class="price-row">
+                            <span class="price">$320.00</span>
+                            <a href="404.html" class="btn btn-primary btn-sm" aria-label="Add to Cart"><i class="fa-solid fa-cart-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+          
+        </div>
+    </section>
+
+   
+
+    <!-- 10. Newsletter Subscription (Reused) -->
+    <section class="newsletter section-padding" data-aos="fade-up">
+        <div class="container"  data-aos="fade-up">
+            <div class="newsletter-wrapper">
+                <div class="newsletter-image">
+                    <img src="assets/images/IMG-20261009-WA3133.webp" alt="Fresh Corner" data-aos="zoom-in">
+                </div>
+                <div class="newsletter-content">
+                    <h2  data-aos="fade-up">Join Our <span class="highlight">Community</span></h2>
+                    <p>Subscribe to our newsletter and get weekly recipe tips, inspiration, and early access to sales.</p>
+                    <form class="newsletter-form">
+                        <div class="newsletter-input-wrapper">
+                            <input type="email" placeholder="Enter your email address" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                    <p class="privacy-text">By subscribing, you agree to our Terms & Conditions and Privacy Policy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- 10. FAQ (Reused) -->
+    <section class="faq-section section-padding" data-aos="fade-up">
+        <div class="container"  data-aos="fade-up">
+            <div class="section-header center" data-aos="zoom-in-up">
+                <h2  data-aos="fade-up">Blog & Community <span class="highlight-line">FAQ</span></h2>
+            </div>
+            
+            <div class="faq-accordion">
+                <div class="faq-item" data-aos="fade-up">
+                    <button class="faq-question">
+                        <span>How often do you post new articles?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>We publish new recipe inspiration, tutorials, and food trend reports every Tuesday and Thursday. Subscribe to our newsletter so you never miss an update!</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-aos="fade-up">
+                    <button class="faq-question">
+                        <span>Can I submit photos of my meals to be featured?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Yes! We love seeing how you cook with Stackly ingredients. Post your photos on Instagram and tag @StacklyGrocery with the hashtag #MyStacklyMeal for a chance to be featured in our gallery and blog.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-aos="fade-up">
+                    <button class="faq-question">
+                        <span>Do you accept guest blog posts?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>We are always looking to collaborate with passionate nutritionists and cooking experts. Please send your pitches to editorial@stacklygrocery.com for consideration.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up">
+                    <button class="faq-question">
+                        <span>How can I subscribe to the weekly grocery trend newsletter?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Simply enter your email in the newsletter signup box at the bottom of any page to receive weekly recipe guides, seasonal food forecasts, and subscriber-only discount codes.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up">
+                    <button class="faq-question">
+                        <span>Where can I find meal planning guides and cooking tips?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Check out our 'Guides & How-Tos' filter category on the blog for step-by-step meal planning articles, dairy products pairing tips, and portion sizing visual cheat sheets.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up">
+                    <button class="faq-question">
+                        <span>Can I request a specific article topic or meal prep guide?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>We love reader feedback! Send your topic suggestions or grocery dilemmas to community@stacklygrocery.com and our lead nutritionists might feature your question in an upcoming article.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up">
+                    <button class="faq-question">
+                        <span>Are the product links in blog articles available for purchase?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Yes! Every article features clickable product links and 'Shop the Look' modules so you can easily purchase the exact groceries and produce items highlighted in the article.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. Call to Action (Reused) -->
+    <section class="cta-section section-padding" style="background-image: linear-gradient(rgba(32,53,40,0.8), rgba(32,53,40,0.8)), url('assets/images/image_013.webp'); background-size: cover; background-position: center; color: white;" data-aos="fade-up">
+        <div class="container center"  data-aos="fade-up">
+            <h2 style="font-size: 3rem; margin-bottom: 20px;" data-aos="fade-up">Ready to Transform Your Diet?</h2>
+            <p style="font-size: 1.125rem; max-width: 600px; margin: 0 auto 40px; opacity: 0.9;">Explore our latest collections and find the perfect ingredients to elevate your meals.</p>
+            <div style="display: flex; gap: 16px; justify-content: center;">
+                <a href="products.html" class="btn btn-primary">Shop Collection</a>
+                <a href="contact.html" class="btn btn-outline">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. Footer -->
+    <footer class="footer">
+        <div class="container"  data-aos="fade-up">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo footer-logo">
+                <img src="assets/images/logo.webp" alt="Stackly Grocery Store" class="site-logo-img" data-aos="zoom-in">
+            </a>
+                    <p class="footer-desc">Providing farm fresh groceries and produce for a healthy lifestyle.</p>
+                    <div class="social-links">
+                        <a href="404.html"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="404.html"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="404.html"><i class="fa-brands fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3  data-aos="fade-up">Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3  data-aos="fade-up">Categories</h3>
+                    <ul>
+                        <li><a href="404.html">Groceries</a></li>
+                        <li><a href="404.html">Dairy Products</a></li>
+                        <li><a href="404.html">Beverages</a></li>
+                        <li><a href="404.html">Meat & Seafood</a></li>
+                        <li><a href="404.html">Snacks & Sweets</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3  data-aos="fade-up">Contact Info</h3>
+                    <ul class="contact-list">
+                        <li><i class="fa-solid fa-location-dot"></i> MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008</li>
+                        <li><i class="fa-solid fa-phone"></i> +91 9876543210</li>
+                        <li><i class="fa-solid fa-envelope"></i> info@Stackly.com</li>
+                        <li><i class="fa-regular fa-clock"></i> Mon-Fri: 9:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Stackly Grocery Store. All Rights Reserved.</p>
+                <div class="payment-methods">
+                    <i class="fa-brands fa-cc-visa"></i>
+                    <i class="fa-brands fa-cc-mastercard"></i>
+                    <i class="fa-brands fa-cc-paypal"></i>
+                    <i class="fa-brands fa-cc-amex"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

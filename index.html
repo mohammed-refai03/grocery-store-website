@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly | Grocery Store</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+</head>
+<body>
+    <!-- Animated Quality Page Preloader -->
+    <div id="pagePreloader" class="page-preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo-ring">
+                <img src="assets/images/logo.webp" alt="Stackly Loading" class="preloader-logo-img" data-aos="zoom-in">
+                <div class="preloader-spinner"></div>
+            </div>
+            <div class="preloader-dots">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 1. Header / Navbar -->
+    <header class="header">
+        <div class="container header-container"  data-aos="fade-up">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.webp" alt="Stackly Grocery Store" class="site-logo-img" data-aos="zoom-in">
+            </a>
+            <nav class="navbar">
+                <a href="index.html" class="active">Home</a>
+                <a href="products.html">Products</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <a href="login.html" class="btn btn-outline"><i class="fa-regular fa-user"></i> Login</a>
+            </div>
+            <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </header>
+
+    <!-- 2. Hero Section (Auto & Manual Multi-Content Slider) -->
+    <section class="hero hero-slider-section" id="homeHeroSection" data-aos="fade-up">
+        
+        <!-- Hero Slides Wrapper -->
+        <div class="hero-slides-wrapper">
+            
+            <!-- Slide 1 -->
+            <div class="hero-slide-item active" data-index="0">
+                <div class="hero-bg">
+                    <img src="assets/images/fresh-fruits-quality.webp" alt="Fresh Fruits Quality" data-aos="zoom-in">
+                    <div class="hero-overlay"></div>
+                </div>
+                <div class="container hero-content"  data-aos="fade-up">
+                    <span class="subtitle"><i class="fa-solid fa-sparkles"></i> TRANSFORM YOUR DIET</span>
+                    <h1>Healthy Lifestyle <br>Starts <span class="highlight">Here</span></h1>
+                    <p>Explore healthy grocery, fresh produce, and handpicked ingredients to create meals you'll love.</p>
+                    <div class="hero-buttons">
+                        <a href="404.html" class="btn btn-primary">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="products.html" class="btn btn-transparent">Explore Collections <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="hero-slide-item" data-index="1">
+                <div class="hero-bg">
+                    <img src="assets/images/IMG-20261009-WA9884.webp" alt="Bespoke Dining & Living" data-aos="zoom-in">
+                    <div class="hero-overlay"></div>
+                </div>
+                <div class="container hero-content"  data-aos="fade-up">
+                    <span class="subtitle"><i class="fa-solid fa-gem"></i> CURATED FRESHNESS</span>
+                    <h1>Premium Grocery for <br>Fresh <span class="highlight">Living</span></h1>
+                    <p>Sourced from certified organic farms, local producers, and sustainable practices.</p>
+                    <div class="hero-buttons">
+                        <a href="404.html" class="btn btn-primary">Shop New Arrivals <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="404.html" class="btn btn-transparent">View Lookbooks <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="hero-slide-item" data-index="2">
+                <div class="hero-bg">
+                    <img src="assets/images/sustainable-local-farm.webp" alt="Sustainable Local Farm" data-aos="zoom-in">
+                    <div class="hero-overlay"></div>
+                </div>
+                <div class="container hero-content"  data-aos="fade-up">
+                    <span class="subtitle"><i class="fa-solid fa-leaf"></i> SUSTAINABLE QUALITY</span>
+                    <h1>Quality First <br>Sourced to <span class="highlight">Nourish</span></h1>
+                    <p>Elevate your meals with eco-friendly groceries selected with uncompromising quality.</p>
+                    <div class="hero-buttons">
+                        <a href="404.html" class="btn btn-primary">Discover Sustainable Line <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="404.html" class="btn btn-transparent">Book Meal Planning <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Floating Side Arrows (Prev / Next) -->
+        <button class="hero-arrow-btn prev" id="heroPrevBtn" aria-label="Previous Slide"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="hero-arrow-btn next" id="heroNextBtn" aria-label="Next Slide"><i class="fa-solid fa-chevron-right"></i></button>
+
+        <!-- Bottom Dot Indicators -->
+        <div class="hero-dots-container"  data-aos="fade-up">
+            <span class="hero-dot active" data-index="0"></span>
+            <span class="hero-dot" data-index="1"></span>
+            <span class="hero-dot" data-index="2"></span>
+        </div>
+
+    </section>
+
+
+    <!-- NEW SECTION 4: Curated Market Aisles (Replaces Shop by Categories) -->
+<section class="home-aisles-spotlight section-padding" data-aos="fade-up">
+    <div class="container" data-aos="fade-up">
+        <div class="section-header center" data-aos="zoom-in-up">
+            <span class="subtitle"><i class="fa-solid fa-store"></i> EXPLORE THE MARKET</span>
+            <h2 data-aos="fade-up">Curated <span class="highlight-line">Aisles</span></h2>
+            <p>Wander through our meticulously sourced sections.</p>
+        </div>
+        
+        <div class="aisles-bento-grid">
+            <!-- Large Card 1 -->
+            <a href="404.html" class="aisle-card large-aisle" data-aos="fade-up" data-aos-delay="100">
+                <div class="aisle-bg">
+                    <img src="assets/images/IMG-20261009-WA6484.webp" alt="Farm Fresh Produce">
+                </div>
+                <div class="aisle-overlay"></div>
+                <div class="aisle-content">
+                    <div class="aisle-icon-box"><i class="fa-solid fa-carrot"></i></div>
+                    <div class="aisle-text-group">
+                        <h3>Farm Fresh Produce</h3>
+                        <p>Locally sourced, organic greens & fruits.</p>
+                    </div>
+                    <span class="aisle-action">Stroll Aisle <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </a>
+            
+            <!-- Large Card 2 -->
+            <a href="404.html" class="aisle-card large-aisle" data-aos="fade-up" data-aos-delay="200">
+                <div class="aisle-bg">
+                    <img src="assets/images/IMG-20261009-WA2104.webp" alt="Artisan Bakery">
+                </div>
+                <div class="aisle-overlay"></div>
+                <div class="aisle-content">
+                    <div class="aisle-icon-box"><i class="fa-solid fa-bread-slice"></i></div>
+                    <div class="aisle-text-group">
+                        <h3>Artisan Bakery</h3>
+                        <p>Freshly baked sourdough and pastries.</p>
+                    </div>
+                    <span class="aisle-action">Stroll Aisle <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </a>
+
+            <!-- Small Card 1 -->
+            <a href="404.html" class="aisle-card small-aisle" data-aos="fade-up" data-aos-delay="300">
+                <div class="aisle-bg">
+                    <img src="assets/images/IMG-20261009-WA8863.webp" alt="Dairy & Eggs">
+                </div>
+                <div class="aisle-overlay"></div>
+                <div class="aisle-content">
+                    <div class="aisle-icon-box"><i class="fa-solid fa-cheese"></i></div>
+                    <h3>Dairy & Eggs</h3>
+                    <span class="aisle-action"><i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </a>
+
+            <!-- Small Card 2 -->
+            <a href="404.html" class="aisle-card small-aisle" data-aos="fade-up" data-aos-delay="400">
+                <div class="aisle-bg">
+                    <img src="assets/images/IMG-20261009-WA7753.webp" alt="Meat & Seafood">
+                </div>
+                <div class="aisle-overlay"></div>
+                <div class="aisle-content">
+                    <div class="aisle-icon-box"><i class="fa-solid fa-seedling"></i></div>
+                    <h3>Rice and Grains</h3>
+                    <span class="aisle-action"><i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </a>
+
+            <!-- Small Card 3 -->
+            <a href="404.html" class="aisle-card small-aisle" data-aos="fade-up" data-aos-delay="500">
+                <div class="aisle-bg">
+                    <img src="assets/images/IMG-20261009-WA5067.webp" alt="Organic Pantry">
+                </div>
+                <div class="aisle-overlay"></div>
+                <div class="aisle-content">
+                    <div class="aisle-icon-box"><i class="fa-solid fa-jar"></i></div>
+                    <h3>Snacks and beverages</h3>
+                    <span class="aisle-action"><i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+    <!-- NEW SECTION 5: Weekly Harvest Specials (Replaces Featured Products) -->
+<section class="home-harvest-spotlight section-padding" data-aos="fade-up">
+    <div class="container" data-aos="fade-up">
+        <div class="section-header flex-between" data-aos="zoom-in-up">
+            <div class="header-text-left">
+                <span class="subtitle"><i class="fa-solid fa-star"></i> PREMIUM PICKS</span>
+                <h2 data-aos="fade-up">Weekly Harvest <span class="highlight-line">Specials</span></h2>
+            </div>
+            <a href="404.html" class="btn btn-primary">View All Specials <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        
+        <div class="harvest-grid">
+            <!-- Product 1 -->
+            <div class="harvest-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="harvest-img-col">
+                    <span class="harvest-badge">Save 15%</span>
+                    <button class="harvest-wishlist" onclick="window.location.href='404.html'"><i class="fa-regular fa-heart"></i></button>
+                    <img src="assets/images/IMG-20261009-WA7454.webp" alt="Heirloom Tomatoes">
+                </div>
+                <div class="harvest-info-col">
+                    <div class="harvest-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                        <span>(128)</span>
+                    </div>
+                    <h3>Organic Heirloom Tomatoes</h3>
+                    <p class="harvest-desc">Locally grown, vibrant and juicy tomatoes perfect for salads and homemade sauces.</p>
+                    <div class="harvest-bottom-row">
+                        <div class="harvest-price">
+                            <span class="old-price">₹120/kg</span>
+                            <span class="new-price">₹102/kg</span>
+                        </div>
+                        <button class="harvest-add-btn" onclick="window.location.href='404.html'"><i class="fa-solid fa-cart-plus"></i> Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="harvest-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="harvest-img-col">
+                    <span class="harvest-badge">Best Seller</span>
+                    <button class="harvest-wishlist" onclick="window.location.href='404.html'"><i class="fa-regular fa-heart"></i></button>
+                    <img src="assets/images/IMG-20261009-WA4143.webp" alt="Artisan Sourdough">
+                </div>
+                <div class="harvest-info-col">
+                    <div class="harvest-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <span>(84)</span>
+                    </div>
+                    <h3>Artisan Sourdough Bread</h3>
+                    <p class="harvest-desc">Freshly baked every morning with our 10-year-old starter for that perfect crust.</p>
+                    <div class="harvest-bottom-row">
+                        <div class="harvest-price">
+                            <span class="new-price">₹85/loaf</span>
+                        </div>
+                        <button class="harvest-add-btn" onclick="window.location.href='404.html'"><i class="fa-solid fa-cart-plus"></i> Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="harvest-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="harvest-img-col">
+                    <span class="harvest-badge">Save 10%</span>
+                    <button class="harvest-wishlist" onclick="window.location.href='404.html'"><i class="fa-regular fa-heart"></i></button>
+                    <img src="assets/images/IMG-20261009-WA6639.webp" alt="Premium Olive Oil">
+                </div>
+                <div class="harvest-info-col">
+                    <div class="harvest-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                        <span>(45)</span>
+                    </div>
+                    <h3>Extra Virgin Olive Oil</h3>
+                    <p class="harvest-desc">Cold-pressed organic olive oil sourced directly from Mediterranean farms.</p>
+                    <div class="harvest-bottom-row">
+                        <div class="harvest-price">
+                            <span class="old-price">₹450/btl</span>
+                            <span class="new-price">₹405/btl</span>
+                        </div>
+                        <button class="harvest-add-btn" onclick="window.location.href='404.html'"><i class="fa-solid fa-cart-plus"></i> Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="harvest-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="harvest-img-col">
+                    <span class="harvest-badge">Local</span>
+                    <button class="harvest-wishlist" onclick="window.location.href='404.html'"><i class="fa-regular fa-heart"></i></button>
+                    <img src="assets/images/IMG-20261009-WA1229.webp" alt="Fresh Organic Herbs">
+                </div>
+                <div class="harvest-info-col">
+                    <div class="harvest-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        <span>(92)</span>
+                    </div>
+                    <h3>Organic Herb Bundle</h3>
+                    <p class="harvest-desc">A fresh mix of basil, cilantro, parsley, and mint to elevate any home-cooked meal.</p>
+                    <div class="harvest-bottom-row">
+                        <div class="harvest-price">
+                            <span class="new-price">₹55/bunch</span>
+                        </div>
+                        <button class="harvest-add-btn" onclick="window.location.href='404.html'"><i class="fa-solid fa-cart-plus"></i> Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        <!-- NEW SECTION 1: Chef-Curated Grocery Bundles -->
+    <section class="home-bundle-spotlight section-padding" data-aos="fade-up">
+        <div class="container" data-aos="fade-up">
+            <div class="bundle-split-wrapper">
+                
+                <div class="bundle-content-box">
+                    <span class="subtitle"><i class="fa-solid fa-box-open"></i> BUNDLE & SAVE</span>
+                    <h2 data-aos="fade-up">Chef-Curated Grocery Bundles</h2>
+                    <p class="bundle-desc">Take the guesswork out of meal prep. Choose a curated box of farm-fresh produce and premium staples perfectly sized for your lifestyle.</p>
+
+                    <div class="bundle-options-list">
+                        <!-- Option 1 -->
+                        <div class="bundle-option active" data-bundle="family">
+                            <div class="bundle-icon"><i class="fa-solid fa-people-roof"></i></div>
+                            <div class="bundle-text">
+                                <h4>Family Harvest Box</h4>
+                                <span>Generous portions of seasonal veggies & wholesome grains.</span>
+                            </div>
+                            <div class="bundle-radio"><div class="radio-dot"></div></div>
+                        </div>
+                        
+                        <!-- Option 2 -->
+                        <div class="bundle-option" data-bundle="plant">
+                            <div class="bundle-icon"><i class="fa-solid fa-leaf"></i></div>
+                            <div class="bundle-text">
+                                <h4>Plant-Based Power</h4>
+                                <span>100% vegan. Fresh greens, legumes, and organic superfoods.</span>
+                            </div>
+                            <div class="bundle-radio"><div class="radio-dot"></div></div>
+                        </div>
+
+                        <!-- Option 3 -->
+                        <div class="bundle-option" data-bundle="quick">
+                            <div class="bundle-icon"><i class="fa-solid fa-clock"></i></div>
+                            <div class="bundle-text">
+                                <h4>Quick Prep Essentials</h4>
+                                <span>Pre-washed veggies, 15-min grains, and fresh artisan sauces.</span>
+                            </div>
+                            <div class="bundle-radio"><div class="radio-dot"></div></div>
+                        </div>
+                    </div>
+
+                    <a href="404.html" class="btn btn-primary">Customize My Bundle <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="bundle-preview-card">
+                    <div class="bundle-img-holder">
+                        <span class="bundle-badge"><i class="fa-solid fa-certificate"></i> 100% Organic</span>
+                        <img src="assets/images/IMG-20261009-WA2093.webp" alt="Fresh Produce Box" data-aos="zoom-in" id="bundle-main-img">
+                    </div>
+                    <div class="bundle-meta-row">
+                        <h3 id="bundle-title" data-aos="fade-up">Family Harvest Box</h3>
+                        <div class="bundle-stats-grid">
+                            <div class="stat-item">
+                                <i class="fa-solid fa-carrot"></i>
+                                <span>15+ Veggies</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fa-solid fa-apple-whole"></i>
+                                <span>10+ Fruits</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fa-solid fa-jar-wheat"></i>
+                                <span>5+ Pantry</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- NEW SECTION 7: Curated Lifestyles (Replaces Trending Styles) -->
+<section class="home-lifestyle-spotlight section-padding" data-aos="fade-up">
+    <div class="container" data-aos="fade-up">
+        <div class="section-header center" data-aos="zoom-in-up">
+            <span class="subtitle"><i class="fa-solid fa-leaf"></i> YOUR WAY</span>
+            <h2 data-aos="fade-up">Curated <span class="highlight-line">Lifestyles</span></h2>
+            <p>Shop collections tailored precisely to your nutritional preferences.</p>
+        </div>
+
+        <div class="lifestyle-split-grid">
+            <!-- Feature 1: Vegan -->
+            <div class="lifestyle-row" data-aos="fade-up" data-aos-delay="100">
+                <div class="lifestyle-img">
+                    <img src="assets/images/IMG-20261009-WA3283.webp" alt="Vegan Collection">
+                    <div class="lifestyle-badge">100% Plant-Based</div>
+                </div>
+                <div class="lifestyle-content">
+                    <div class="icon-wrap"><i class="fa-solid fa-seedling"></i></div>
+                    <h3>The Vegan Pantry</h3>
+                    <p>Discover our wide selection of dairy-free, meat-free, and purely plant-powered essentials for everyday cooking.</p>
+                    <ul class="lifestyle-perks">
+                        <li><i class="fa-solid fa-check-circle"></i> Dairy Alternatives</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Plant Proteins</li>
+                    </ul>
+                    <a href="404.html" class="btn lifestyle-btn">Shop Vegan <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Feature 2: Keto -->
+            <div class="lifestyle-row reverse" data-aos="fade-up" data-aos-delay="200">
+                <div class="lifestyle-img">
+                    <img src="assets/images/IMG-20261009-WA9586.webp" alt="Keto Collection">
+                    <div class="lifestyle-badge">High Protein</div>
+                </div>
+                <div class="lifestyle-content">
+                    <div class="icon-wrap"><i class="fa-solid fa-drumstick-bite"></i></div>
+                    <h3>Keto & Low Carb</h3>
+                    <p>Fuel your day with premium high-protein meats, rich cheeses, and low-carb snacks perfectly suited for the keto diet.</p>
+                    <ul class="lifestyle-perks">
+                        <li><i class="fa-solid fa-check-circle"></i> Quality Fats</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Zero Sugar Added</li>
+                    </ul>
+                    <a href="404.html" class="btn lifestyle-btn">Shop Keto <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Feature 3: Organic -->
+            <div class="lifestyle-row" data-aos="fade-up" data-aos-delay="300">
+                <div class="lifestyle-img">
+                    <img src="assets/images/IMG-20261009-WA5702.webp" alt="Organic Collection">
+                    <div class="lifestyle-badge">Certified Organic</div>
+                </div>
+                <div class="lifestyle-content">
+                    <div class="icon-wrap"><i class="fa-solid fa-apple-whole"></i></div>
+                    <h3>Purely Organic</h3>
+                    <p>No synthetic pesticides or fertilizers. Just clean, natural produce and pantry staples exactly as nature intended.</p>
+                    <ul class="lifestyle-perks">
+                        <li><i class="fa-solid fa-check-circle"></i> Non-GMO</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Locally Grown</li>
+                    </ul>
+                    <a href="404.html" class="btn lifestyle-btn">Shop Organic <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+         <!-- NEW SECTION 2: Our Freshness Promise (Replaces Why Choose Us) -->
+    <section class="home-promise-spotlight section-padding" data-aos="fade-up">
+        <div class="container" data-aos="fade-up">
+            <div class="promise-split-wrapper">
+                
+                <div class="promise-image-col">
+                    <div class="promise-image-wrapper">
+                        <img src="assets/images/sustainable-local-farm.webp" alt="Fresh Produce Quality" data-aos="zoom-in" class="promise-main-img">
+                        
+                        
+                    </div>
+                </div>
+
+                <div class="promise-content-col">
+                    <span class="subtitle"><i class="fa-solid fa-seedling"></i> OUR COMMITMENT</span>
+                    <h2 data-aos="fade-up">The Farm-to-Table <span class="highlight-line">Difference</span></h2>
+                    <p class="promise-desc">We go beyond standard grocery delivery. Our direct partnerships with local farmers and rigorous cold-chain logistics ensure you receive only the most pristine, nutrient-rich produce.</p>
+                    
+                    <div class="promise-grid">
+                        <div class="promise-card" data-aos="fade-up" data-aos-delay="100">
+                            <i class="fa-solid fa-tractor promise-icon"></i>
+                            <h4>Local Sourcing</h4>
+                            <p>Sourced from organic farms within a 50-mile radius.</p>
+                        </div>
+                        <div class="promise-card" data-aos="fade-up" data-aos-delay="200">
+                            <i class="fa-solid fa-box-open promise-icon"></i>
+                            <h4>Eco-Packaging</h4>
+                            <p>100% compostable and zero-waste transit materials.</p>
+                        </div>
+                        <div class="promise-card" data-aos="fade-up" data-aos-delay="300">
+                            <i class="fa-solid fa-microscope promise-icon"></i>
+                            <h4>Hand Inspected</h4>
+                            <p>Every item is individually checked before boxing.</p>
+                        </div>
+                        <div class="promise-card" data-aos="fade-up" data-aos-delay="400">
+                            <i class="fa-solid fa-snowflake promise-icon"></i>
+                            <h4>Cold-Chain Transit</h4>
+                            <p>Maintained at optimal temperature directly to your door.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- NEW SECTION 2: Sustainable Craftsmanship & Material Lab -->
+    <section class="home-material-lab section-padding" data-aos="fade-up">
+        <div class="container"  data-aos="fade-up">
+            <div class="section-header center" data-aos="zoom-in-up">
+                <span class="subtitle"><i class="fa-solid fa-leaf"></i> QUALITY LAB</span>
+                <h2  data-aos="fade-up">Responsibly Sourced <span class="highlight-line">Freshness</span></h2>
+                <p style="max-width: 540px; margin: 8px auto 0 auto; color: var(--text-light);">We partner with ethical farms and certified producers to bring quality groceries supporting healthy generations.</p>
+            </div>
+
+            <div class="material-bento-grid">
+                <!-- Material Card 1: FSC Certified Teak -->
+                <div class="mat-card mat-card-large">
+                    <div class="mat-card-header">
+                        <div class="mat-icon-badge"><i class="fa-solid fa-tree"></i></div>
+                        <span class="mat-origin-tag"><i class="fa-solid fa-globe"></i> Ethical Farming Partners</span>
+                    </div>
+                    <div>
+                        <h3  data-aos="fade-up">FSC&reg; Certified Solid Local Fresh</h3>
+                        <p>Harvested exclusively from sustainably managed local farms. Picked at peak freshness, each item retains natural organic flavor with perfect ripeness.</p>
+                    </div>
+                    <div class="mat-footer-pills">
+                        <span class="mat-pill">100% Recyclable</span>
+                        <span class="mat-pill">Zero Deforestation</span>
+                        <span class="mat-pill">Freshness Guarantee</span>
+                    </div>
+                </div>
+
+                <!-- Material Card 2: Organic Belgian Linen -->
+                <div class="mat-card mat-card-small">
+                    <div class="mat-card-header">
+                        <div class="mat-icon-badge"><i class="fa-solid fa-shirt"></i></div>
+                        <span class="mat-origin-tag"><i class="fa-solid fa-shield-halved"></i> USDA Organic Standard</span>
+                    </div>
+                    <div>
+                        <h3  data-aos="fade-up">Organic Fresh Greens</h3>
+                        <p>Grown from non-GMO seeds without synthetic pesticides. Healthy and naturally delicious with superior nutrition.</p>
+                    </div>
+                    <div class="mat-footer-pills">
+                        <span class="mat-pill">Chemical-Free</span>
+                        <span class="mat-pill">Washed & Ready</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Special Offer Banner -->
+    <section class="special-offer" data-aos="fade-up">
+        <div class="container"  data-aos="fade-up">
+            <div class="offer-banner">
+                <div class="offer-img">
+                    <img src="assets/images/IMG-20261009-WA2093.webp" alt="Yogurt" data-aos="zoom-in">
+                </div>
+                <div class="offer-content">
+                    <span class="subtitle">SPECIAL OFFER</span>
+                    <h2  data-aos="fade-up">Fresh Deals, Better Savings</h2>
+                    <p>Get 20% OFF on your first grocery order.<br><strong>Use code: FRESH20</strong></p>
+                    <a href="404.html" class="btn btn-primary">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="offer-features">
+                    <div class="offer-feature">
+                        <div class="icon"><i class="fa-solid fa-leaf"></i></div>
+                        <span>Premium<br>Quality</span>
+                    </div>
+                    <div class="offer-feature">
+                        <div class="icon"><i class="fa-solid fa-certificate"></i></div>
+                        <span>Best Prices<br>Guaranteed</span>
+                    </div>
+                    <div class="offer-feature">
+                        <div class="icon"><i class="fa-solid fa-gem"></i></div>
+                        <span>Delicious<br>Groceries</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         ADDED 6 MORE RELATED SECTIONS WITH DIFFERENT LAYOUTS
+         ========================================== -->
+
+    
+
+    
+
+    <!-- 9. Design Inspiration (Magazine Blog Layout) -->
+    <section class="blog-inspiration section-padding" data-aos="fade-up">
+        <div class="container"  data-aos="fade-up">
+            <div class="section-header flex-between" data-aos="zoom-in-up">
+                <h2  data-aos="fade-up">Curation <span class="highlight-line">Inspiration</span></h2>
+            </div>
+            <div class="blog-grid" data-aos="fade-up">
+                <!-- Large Featured Article -->
+                <article class="blog-card featured-article" data-aos="flip-left" data-aos-delay="100">
+                    <div class="blog-img">
+                        <img src="assets/images/IMG-20261009-WA2083.webp" alt="Fresh Fruits Tips" data-aos="zoom-in">
+                        <span class="category-badge">Fresh Produce</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="fa-regular fa-calendar"></i> Oct 15, 2023</span>
+                            <span><i class="fa-regular fa-clock"></i> 5 min read</span>
+                        </div>
+                        <h3  data-aos="fade-up"><a href="404.html">5 Easy Healthy Breakfast Ideas</a></h3>
+                        <p>Quick and nutritious breakfast ideas for busy mornings.</p>
+                        <a href="404.html" class="read-more">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                
+                <!-- Smaller Articles List -->
+                <div class="side-articles" data-aos="fade-up">
+                    <article class="blog-card small-article" data-aos="flip-left" data-aos-delay="200">
+                        <div class="blog-img">
+                            <img src="assets/images/IMG-20261009-WA7100.webp" alt="Fresh Veggies Ideas" data-aos="zoom-in">
+                        </div>
+                        <div class="blog-content">
+                            <span class="category-badge">Fresh Vegetables</span>
+                            <h3  data-aos="fade-up"><a href="404.html">How to Store Fresh Vegetables Longer</a></h3>
+                            <div class="blog-meta">
+                                <span><i class="fa-regular fa-calendar"></i> Oct 10, 2023</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="blog-card small-article" data-aos="flip-left" data-aos-delay="300">
+                        <div class="blog-img">
+                            <img src="assets/images/pantry-grocery.webp" alt="Pantry Grocery" data-aos="zoom-in">
+                        </div>
+                        <div class="blog-content">
+                            <span class="category-badge">Pantry</span>
+                            <h3  data-aos="fade-up"><a href="404.html">Weekly Grocery Shopping Made Easy</a></h3>
+                            <div class="blog-meta">
+                                <span><i class="fa-regular fa-calendar"></i> Oct 05, 2023</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="blog-card small-article" data-aos="flip-left" data-aos-delay="100">
+                        <div class="blog-img">
+                            <img src="assets/images/dairy-products-guide.webp" alt="Dairy Products Guide" data-aos="zoom-in">
+                        </div>
+                        <div class="blog-content">
+                            <span class="category-badge">Guides</span>
+                            <h3  data-aos="fade-up"><a href="404.html">Healthy Snacks for the Whole Family</a></h3>
+                            <div class="blog-meta">
+                                <span><i class="fa-regular fa-calendar"></i> Sep 28, 2023</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Customer Testimonials (Carousel Layout) -->
+    <section class="testimonials section-padding" data-aos="fade-up">
+        <div class="container"  data-aos="fade-up">
+            <div class="section-header center" data-aos="zoom-in-up">
+                <h2  data-aos="fade-up">What Our Customers <span class="highlight-line">Say</span></h2>
+            </div>
+            
+            <div class="testimonial-slider-wrapper">
+                <!-- Swiper -->
+                <div class="swiper testimonial-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                                <i class="fa-solid fa-quote-left quote-icon"></i>
+                                <p class="review-text">"The vegetables were fresh, the prices were reasonable, and delivery was quick."</p>
+                                <div class="customer-info">
+                                    <img src="assets/images/uifaces-popular-avatar (5).webp" alt="Sarah J." data-aos="zoom-in">
+                                    <div>
+                                        <h4  data-aos="fade-up">Priya S.</h4>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                                <i class="fa-solid fa-quote-left quote-icon"></i>
+                                <p class="review-text">"I love how easy it is to find everything I need in one place."</p>
+                                <div class="customer-info">
+                                    <img src="assets/images/uifaces-popular-avatar (2).webp" alt="Mark T." data-aos="zoom-in">
+                                    <div>
+                                        <h4  data-aos="fade-up">Arun K.</h4>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                                <i class="fa-solid fa-quote-left quote-icon"></i>
+                                <p class="review-text">"The quality was excellent and my order arrived fresh and well packed."</p>
+                                <div class="customer-info">
+                                    <img src="assets/images/uifaces-popular-avatar (3).webp" alt="Emily R." data-aos="zoom-in">
+                                    <div>
+                                        <h4  data-aos="fade-up">Meena R.</h4>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                                <i class="fa-solid fa-quote-left quote-icon"></i>
+                                <p class="review-text">"I ordered a custom fruit basket. The Premium delivery team was incredibly professional. They set it up in my kitchen and took all the packaging with them!"</p>
+                                <div class="customer-info">
+                                    <img src="assets/images/uifaces-popular-avatar (4).webp" alt="James L." data-aos="zoom-in">
+                                    <div>
+                                        <h4  data-aos="fade-up">James Lawson</h4>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                                <i class="fa-solid fa-quote-left quote-icon"></i>
+                                <p class="review-text">"As a private chef, joining the Professional Partner program was a no-brainer. The dedicated account manager makes sourcing items for my clients so easy."</p>
+                                <div class="customer-info">
+                                    <img src="assets/images/uifaces-popular-avatar (1).webp" alt="Anna K." data-aos="zoom-in">
+                                    <div>
+                                        <h4  data-aos="fade-up">Anna Kowalski</h4>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                                <i class="fa-solid fa-quote-left quote-icon"></i>
+                                <p class="review-text">"I couldn't be happier with the dairy products. They were incredibly fresh and they instantly elevated the flavor in our meals."</p>
+                                <div class="customer-info">
+                                    <img src="assets/images/uifaces-popular-avatar (6).webp" alt="David M." data-aos="zoom-in">
+                                    <div>
+                                        <h4  data-aos="fade-up">David Martinez</h4>
+                                        <div class="rating">
+                                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="swiper-button-next" style="color: var(--primary-green);"></div>
+                <div class="swiper-button-prev" style="color: var(--primary-green);"></div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- 11. FAQ (Accordion) -->
+    <section class="faq-section section-padding" data-aos="fade-up">
+        <div class="container"  data-aos="fade-up">
+            <div class="section-header center" data-aos="zoom-in-up">
+                <h2  data-aos="fade-up">Frequently Asked <span class="highlight-line">Questions</span></h2>
+                <p>Everything you need to know about our products and services.</p>
+            </div>
+            
+            <div class="faq-accordion">
+                <div class="faq-item" data-aos="fade-up">
+                    <button class="faq-question">
+                        <span>Do you offer home delivery?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Yes, we offer convenient home delivery for your grocery orders.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-aos="fade-up">
+                    <button class="faq-question">
+                        <span>How can I place an order?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Choose your products, add them to your cart, and complete the checkout process.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-aos="fade-up">
+                    <button class="faq-question">
+                        <span>Are your fruits and vegetables fresh?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Yes, we carefully select fresh fruits and vegetables for every order.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-aos="fade-up">
+                    <button class="faq-question">
+                        <span>Can I track my order?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Once your order ships, you will receive a confirmation email with a tracking number. You can use this number on our tracking page to see the real-time status of your delivery.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up">
+                    <button class="faq-question">
+                        <span>Are your groceries sustainably sourced?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Yes, sustainability is at our core. All our produce is organically certified, our spices use natural ingredients, and we partner exclusively with ethical farmers globally.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up">
+                    <button class="faq-question">
+                        <span>What payment methods do you accept?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>We support common online payment methods and cash on delivery where available.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up">
+                    <button class="faq-question">
+                        <span>Can I cancel or modify my order?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Orders can be modified or cancelled according to the order status and store policy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+  
+
+    <!-- 12. Footer (Multi-column Layout) -->
+    <footer class="footer">
+        <div class="container"  data-aos="fade-up">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo footer-logo">
+                <img src="assets/images/logo.webp" alt="Stackly Grocery Store" class="site-logo-img" data-aos="zoom-in">
+            </a>
+                    <p class="footer-desc">Providing farm fresh groceries and produce for a healthy lifestyle.</p>
+                    <div class="social-links">
+                        <a href="404.html"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="404.html"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="404.html"><i class="fa-brands fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3  data-aos="fade-up">Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3  data-aos="fade-up">Categories</h3>
+                    <ul>
+                        <li><a href="404.html">Groceries</a></li>
+                        <li><a href="404.html">Dairy Products</a></li>
+                        <li><a href="404.html">Beverages</a></li>
+                        <li><a href="404.html">Meat & Seafood</a></li>
+                        <li><a href="404.html">Snacks & Sweets</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3  data-aos="fade-up">Contact Info</h3>
+                    <ul class="contact-list">
+                        <li><i class="fa-solid fa-location-dot"></i> MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008</li>
+                        <li><i class="fa-solid fa-phone"></i> +91 9876543210</li>
+                        <li><i class="fa-solid fa-envelope"></i> info@Stackly.com</li>
+                        <li><i class="fa-regular fa-clock"></i> Mon-Fri: 9:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Stackly Grocery Store. All Rights Reserved.</p>
+                <div class="payment-methods">
+                    <i class="fa-brands fa-cc-visa"></i>
+                    <i class="fa-brands fa-cc-mastercard"></i>
+                    <i class="fa-brands fa-cc-paypal"></i>
+                    <i class="fa-brands fa-cc-amex"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
